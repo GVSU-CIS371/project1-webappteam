@@ -8,6 +8,7 @@ html {
 }
 
 body {
+  background: silver;
   grid-template-areas: 
   "head"
   "main"
@@ -15,6 +16,7 @@ body {
 }
 
 header {
+  background: gainsboro;
   grid-area: head;
   display: flex;
   justify-content: space-between;
@@ -22,17 +24,17 @@ header {
 
 nav ul {
   list-style-type: none;
-
 }
 
-nav ul li{
+nav ul li{/*links*/
   float: left;
   padding-right: 10px;
 }
 
-nav ul li a {
+nav ul li a {/*links text*/
   display: block;
   text-align: center;
+  color: cadetblue;
 }
 
 main {
@@ -48,18 +50,23 @@ main {
   height: auto;
   display: flex;
   flex-direction: column;
+  color: midnightblue;
 }
 
-.store-item img {
+.store-item img {/**/
   height: 50%;
+  width: auto;
 }
 
-/*.store-item span {
-  need to fix somehow. Is currently screwed up because of .store-item slex-direction: column
-  this is putting each span on its own line because they are not wrapped in a div or p or something
-  might have to change layout for it to work because I dont know if we can modify the html
-}*/
+.store-item span {/*rating, price, stock*/
+  display: inline-flex;
+  flex-wrap: nowrap;
+  color: slateblue;/*chartreuse;*/
+  background: burlywood;/*salmon;*/
+  margin: 5px;
+}
 
 footer {
   grid-area: foot;
+  background: darkgray;
 }
